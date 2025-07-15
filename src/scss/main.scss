@@ -1,0 +1,40 @@
+@import "./utilities/mixins";
+@import "./utilities/variables";
+@import "./pages/Navbar.scss";
+@import "./pages/HeroSection.scss";
+@import "./pages/AboutSection.scss";
+@import "./pages/ProjectsSection.scss";
+@import "./pages/ContactSection.scss";
+
+.page-sections {
+    margin: 0 20px;
+
+    @include media-breakpoint-up(md) {
+        width: 1024px;
+        margin: 0 auto;
+    }
+
+    .section-box {
+        scroll-margin-top: 100px;
+    }
+
+    .section-heading {
+        font-weight: 700;
+        font-size: 45px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 75px;
+            text-align: center;
+        }
+    }
+
+    .section-description {
+        font-size: 16px;
+        line-height: 20px;
+
+        @include media-breakpoint-up(md) {
+            font-size: 24px;
+            line-height: 40px;
+        }
+    }
+}

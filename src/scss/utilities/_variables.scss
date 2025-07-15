@@ -1,0 +1,43 @@
+// Font Weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bold !default;
+
+// Layout & Spacings
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+);
+
+// color
+$white-1:#fff;
+$white-2:#d8d8d8;
+$white-3:#d1d5db;
+$white-4:#c0c0c0;
+$white-5:#fffffff2;
+$white-6:#e5e7eb;
+
+$yellow-1:#df8908;
+$yellow-2:#ffd70026;
+
+$black-1:#000000;
+$black-2:#00000099;
+$black-3:#000000b3;
+
+$dark-1:#161513;
+$dark-2:#32323c;
+$darkBlue-1:#070322;
+$darkBlue-2:#111827;
+$darkBlue-3:#251f38;
+
+$purple-1:#b415ff;
+$purple-2:#8245ec;
+$purple-3:#a855f7;
+$purple-4:#9333ea;
+
+$gray-1:#a0a0a0;

@@ -1,0 +1,122 @@
+.navbar-section {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+    background: $dark-1;
+
+    .nav-logo {
+        .logo-symbol,
+        .logo-name {
+            font-weight:$font-weight-semibold;
+        }
+
+        .logo-symbol {
+            color: $purple-2;
+        }
+    }
+
+    .nav-drawer {
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            font-size: 22px;
+            color: $white-3;
+            flex-direction: column;
+            margin: 40px 20px;
+
+            @include media-breakpoint-up(lg) {
+                gap: 60px;
+                flex-direction: row;
+            }
+
+            .nav-item {
+                text-align: center;
+                cursor: pointer;
+                margin-bottom: 20px;
+
+                @include media-breakpoint-up(md) {
+                    text-align: unset;
+                }
+
+                .nav-label {
+                    display: inline-block;
+                    position: relative;
+                    color: unset;
+                    text-decoration: none;
+
+                    &::after {
+                        position: absolute;
+                        content: "";
+                        left: 0;
+                        height: 3px;
+                        background: $purple-2;
+                        width: 0%;
+                        bottom: -4px;
+                        transition: width 0.3s ease;
+                        margin: 0 auto;
+                        right: 0;
+                    }
+
+                    &:hover {
+                        color: $white-1;
+                        &::after {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu-desktop {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+            display: inline-block !important;
+        }
+    }
+
+    .menu-mobile {
+        display: inline-block;
+        background-color: $darkBlue-1;
+        position: absolute;
+        top: 80px;
+        width: 97%;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.4s ease-in-out;
+
+        &.show-menu {
+            max-height: 600px;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+            all: unset;
+        }
+    }
+
+    .hamburger-btn {
+        width: 5%;
+        display: inline-block;
+
+        @include media-breakpoint-up(lg) {
+            display: none;
+        }
+
+        .hamburgerMenu-icon {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+}

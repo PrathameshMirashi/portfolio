@@ -1,0 +1,42 @@
+.about-section {
+    @include media-breakpoint-up(md) {
+        text-align: center;
+    }
+
+    .section-subheading {
+        font-weight: $font-weight-semibold;
+        font-size: 24px;
+
+        @include media-breakpoint-up(md) {
+            font-weight: $font-weight-semibold;
+            font-size: 34px;
+        }
+    }
+
+    .about-list {
+        text-align: start;
+        margin: 0 24px;
+
+        .about-item {
+            font-size: 16px;
+            line-height: 20px;
+
+            @include media-breakpoint-up(md) {
+                font-size: 24px;
+                line-height: 40px;
+            }
+        }
+    }
+
+    .icon-grid {
+        .tech-icon {
+            width: 8%;
+            object-fit: contain;
+            margin: 0 20px 10px;
+
+            @include media-breakpoint-up(md) {
+                margin: 0 20px;
+            }
+        }
+    }
+}

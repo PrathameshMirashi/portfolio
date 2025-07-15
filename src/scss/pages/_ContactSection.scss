@@ -1,0 +1,87 @@
+.contact-section {
+    margin-bottom: 30px;
+
+    .contact-wrapper {
+        @include media-breakpoint-up(md) {
+            display: flex;
+        }
+
+        .contact-info-block {
+            margin-bottom: 30px;
+            
+            @include media-breakpoint-up(md) {
+                margin-right: 50px;
+                max-width: 400px;
+            }
+
+            .contact-heading {
+                margin: 0px 0px 20px;
+                font-size: 50px;
+                background: linear-gradient(270deg, $yellow-1 80%, $purple-1 100%);
+                background-clip: text;
+                color: transparent;
+            }
+
+            .contact-description {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .contact-detail {
+                .contact-item {
+                    .contact-info {
+                        width: 5%;
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        font-size: 16px;
+                        line-height: 24px;
+
+                        .contact-icon {
+                            width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            @include media-breakpoint-up(md) {
+                width: 100%;
+            }
+
+            .form-group {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 20px;
+
+                .form-label {
+                    margin-bottom: 10px;
+                    color: $white-2;
+                    font-size: 16px;
+                }
+
+                .form-input {
+                    border: none;
+                    padding: 20px 5px;
+                    outline: none;
+                    border-radius: 4px;
+                    background: $dark-2;
+                    color: $gray-1;
+                    font-size: 18px;
+                    resize: vertical;
+                }
+            }
+            
+            .contact-submit {
+                border: none;
+                color: $white-1;
+                border-radius: 50px;
+                background: linear-gradient(264deg, $yellow-1 -5.09%, $purple-1 106.28%);
+                font-size: 18px;
+                padding: 18px 40px;
+            }
+        }
+    }
+}
